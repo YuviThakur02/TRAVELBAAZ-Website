@@ -1,0 +1,150 @@
+.container-cards {
+    width: 100%;
+    min-height: 100vh;
+    /*responsive for small screens/ auto adjusts*/
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;   for responsiveness */
+    /* border: 3px solid #6c2d43; */
+    position: relative;
+    background-color: #fff;
+    gap: 100px 50px;
+    z-index: 1;
+    padding: 80px 50px;
+    transition: 0.4s ease;
+}
+section.container-cards{
+    background-image: url("Images/Cards-Images/bg-lines.avif");
+    object-fit: cover;
+    background-attachment: fixed;
+    background-position:center;
+    background-size: cover;     /*Imp to fill the image*/
+    transition: 0.4s ease;
+} 
+
+.cards-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+    padding-top: 20px;
+}
+
+
+.container-cards .content-card {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-cards .content-card h1 {
+    /* font-family: "Comfortaa", sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    font-weight:900;
+    font-size: 2.9rem;
+    margin-bottom: 15px;
+}
+
+.container-cards .content-card h3{
+    color:#666;
+    text-align:center;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 300;
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+.container-cards .cards {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /*For the imgBx*/
+    align-items: flex-start;
+    /*For the imgBx*/
+    background-color: #fff;
+    height: 350px;
+    width: 400px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 35px 40px rgba(77, 77, 77, 0.4);
+    transition: 0.5s all;
+}
+
+.container-cards .cards:hover {
+    height: 450px;
+}
+
+.container-cards .cards .imgBx {
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    background-color: black;
+    top: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    overflow: hidden;
+    /*Help image to fit in the designed class(like corner)*/
+}
+
+.container-cards .cards:hover .imgBx {
+    top: -100px;
+    scale: 0.8;
+    /*Smaller size after hover*/
+    box-shadow: 0 35px 80px #ff16;
+}
+
+.container-cards .cards .imgBx img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.container-cards .cards .content {
+    position: absolute;
+    width: 100%;
+    padding: 0 33px;
+    top: 230px;
+    height: 25px;
+    /*Understand the logic of hiding text*/
+    overflow: hidden;
+    /*Doubt*/
+    text-align: center;
+    /*aligns item to center*/
+    transition: 0.5s;
+}
+
+.container-cards .cards:hover .content {
+    height: 230px;
+    top: 160px;
+}
+
+.container-cards .cards .content h2 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.container-cards .cards .content p {
+    font-size: 1.02em;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-top: 9px;
+    color: #333;
+}
+
+.container-cards .cards .content a {
+    padding: 12px 20px;
+    background-color: var(--clr);
+    /*gives minimun width learn more about inline or inline-block*/
+    position: relative;
+    color: #fff;
+    top: 30px;
+    border-radius: 4px;
+    text-decoration: none;
+}
